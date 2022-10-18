@@ -7,3 +7,5 @@
 @Accessors(chain=true)
 Опция chain дает нам сеттеры, которые возвращают this . Еще раз обратите внимание , что по умолчанию он имеет значение true , но мы установим его явно для ясности.
 Это означает, что мы можем объединить несколько операций set в одном операторе.
+
+The @NotBlank annotation uses the NotBlankValidator class, which checks that a character sequences trimmed length is not empty.
