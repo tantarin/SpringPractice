@@ -4,15 +4,14 @@ import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 
-@Entity//помечаем бин как сущность
-@Table(name = "fruit_table")//в этой аннотации можно указать имя создаваемой таблицы
+@Entity
+@Table(name = "fruit_table")
 public class FruitEntity {
 
-    @Id//аннотация из пакета avax.persistence.*, помечает поле как id
-    @Column(name = "id_fruit")//в этой аннотации можно указать имя поля
-    @GenericGenerator(name = "generator", strategy = "increment")//незаметно добрались до hibernate,
-// здесь указывается что id будет автоматически увеличиваться при новых записях
-    @GeneratedValue(generator = "generator")//аннотация генерации id
+    @Id
+    @Column(name = "id_fruit")
+    @GenericGenerator(name = "generator", strategy = "increment")
+    @GeneratedValue(generator = "generator")
     private Integer id;
 
     @Column(name = "fruit_name")
